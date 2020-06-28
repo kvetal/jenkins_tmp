@@ -18,7 +18,7 @@ pipeline {
         }
         stage("Second step") {
             steps {
-                sh 'ssh test@uhome \'uptime\''
+                sh 'ssh test@home \'uptime\''
             }
         }
     }
