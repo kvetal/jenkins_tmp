@@ -13,7 +13,7 @@ pipeline{
 	stages {
 		stage("Preparations"){
 			steps {
-				ws('~/ws') {
+				ws('workspace/mylibpng') {
 					git 'git://git.code.sf.net/p/libpng/code'
 				}
 			}
