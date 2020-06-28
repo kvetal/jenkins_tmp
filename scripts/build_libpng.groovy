@@ -15,7 +15,7 @@ pipeline{
 			steps {
 				ws('workspace/mylibpng') {
 					git 'git://git.code.sf.net/p/libpng/code'
-					cmake arguments: installation: 'InSearchPath'
+					cmake installation: 'InSearchPath'
 //					cmakeBuild buildDir: 'build', installation: 'InSearchPath'
 				}	
 			}
