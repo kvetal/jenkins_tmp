@@ -21,5 +21,10 @@ pipeline {
                 sh 'ssh test@home \'uptime\''
             }
         }
+		stage("Third step"){
+			steps{
+				sh 'ls -la'
+			}
+		}
     }
 }
