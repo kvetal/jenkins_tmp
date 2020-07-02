@@ -24,6 +24,16 @@ pipeline {
 		stage("Third step"){
 			steps{
 				sh 'ls -la'
+				def server = Artifactory.server 'home'
+				def uploadSpec = """{
+					  "files": [
+    					{
+      						"pattern": "bazinga/*froggy*.zip",
+							"target": "bazinga-repo/froggy-files/"
+    					}
+				 ]
+				}"""
+server.upload(uploadSpec)
 			}
 		}
     }
